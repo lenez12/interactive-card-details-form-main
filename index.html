@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Frontend Mentor | Interactive card details form</title>
+	</head>
+	<body>
+		<main class="grid">
+			<div class="card__wrapper">
+				<div class="card__front-wrapper">
+					<img src="images/card-logo.svg" alt="" class="card__icon" />
+					<p class="card__front-number">0000 0000 0000 0000</p>
+					<div class="card__front-description">
+						<p class="card__front-name">Jery Lenas</p>
+						<p class="card__front-date">00/00</p>
+					</div>
+				</div>
+				<div class="card__back-wrapper">
+					<p class="card__back-number">000</p>
+				</div>
+			</div>
+			<div class="form__section">
+				<div class="form">
+					<div class="form__input__wrapper">
+						<label for="cardholder_name"> Cardholder Name</label>
+						<input
+							type="text"
+							name="cardholder_name"
+							id="cardholder_name"
+							placeholder=" e.g. Jane Appleseed"
+						/>
+					</div>
+					<div class="form__input__wrapper">
+						<label for="card_number">Card Number</label>
+						<input
+							type="text"
+							name="card_number"
+							id="card_number"
+							placeholder="e.g. 1234 5678 9123 0000"
+						/>
+					</div>
+
+					<div class="card__description_wrapper">
+						<div class="form__input__wrapper">
+							<label for="card__expired">Exp. Date (MM/YY) </label>
+							<div class="flex">
+								<input
+									class="input__small mr-8"
+									type="text"
+									name="card_expired_month"
+									id="card_expired_month"
+									placeholder="MM"
+								/>
+
+								<input
+									class="input__small"
+									type="text"
+									name="card_expired_year"
+									id="card_expired_year"
+									placeholder="YY"
+								/>
+							</div>
+						</div>
+						<div class="form__input__wrapper">
+							<label for="card__secretcode">CVC</label>
+							<input
+								type="text"
+								name="card__secretcode"
+								id="card__secretcode"
+								placeholder=" e.g. 123"
+							/>
+						</div>
+					</div>
+					<div class="button__wrapper">
+						<button class="btn__confirm">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Completed state start -->
+
+		<!-- Thank you! We've added your card details Continue -->
+	</body>
+</html>
+
