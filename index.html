@@ -15,81 +15,119 @@
 	</head>
 	<body>
 		<main class="grid">
-			<div class="card__wrapper">
+			<div class="card__section">
 				<div class="card__front-wrapper">
 					<img src="images/card-logo.svg" alt="" class="card__icon" />
-					<p class="card__front-number">0000 0000 0000 0000</p>
+					<p id="card__front-number" class="card__front-number">
+						0000 0000 0000 0000
+					</p>
 					<div class="card__front-description">
-						<p class="card__front-name">Jery Lenas</p>
-						<p class="card__front-date">00/00</p>
+						<p id="card__front-name" class="card__front-name">Jery Lenas</p>
+						<p id="card__front-expired" class="card__front-date">00/00</p>
 					</div>
 				</div>
 				<div class="card__back-wrapper">
-					<p class="card__back-number">000</p>
+					<p id="card__back-number" class="card__back-number">000</p>
 				</div>
 			</div>
 			<div class="form__section">
-				<div class="form">
-					<div class="form__input__wrapper">
-						<label for="cardholder_name"> Cardholder Name</label>
+				<form name="card_form" id="card_form" class="form">
+					<div class="input-control">
+						<label for="cardholder_name">Cardholder Name</label>
 						<input
 							type="text"
-							name="cardholder_name"
 							id="cardholder_name"
+							name="cardholder_name"
+							oninput="onInput(event)"
 							placeholder=" e.g. Jane Appleseed"
+							autocomplete="name"
+							maxlength="15"
+							required
 						/>
+						<div class="error"></div>
 					</div>
-					<div class="form__input__wrapper">
+					<div class="input-control">
 						<label for="card_number">Card Number</label>
 						<input
 							type="text"
-							name="card_number"
+							name="cardnumber"
 							id="card_number"
+							oninput="onInput(event)"
+							pattern="[0-9]{16}"
+							maxlength="16"
+							title="16 digit on your credit card"
 							placeholder="e.g. 1234 5678 9123 0000"
+							required
 						/>
+						<div class="error"></div>
 					</div>
-
 					<div class="card__description_wrapper">
-						<div class="form__input__wrapper">
-							<label for="card__expired">Exp. Date (MM/YY) </label>
+						<div class="input-control mr-1" id="input-control-expired">
+							<label for="cardexpired">Exp. Date (MM/YY) </label>
 							<div class="flex">
 								<input
-									class="input__small mr-8"
+									id="cardexpired_month"
+									name="cardexpired_month"
+									class="input-control-small mr-1"
 									type="text"
-									name="card_expired_month"
-									id="card_expired_month"
+									oninput="onInput(event)"
 									placeholder="MM"
+									pattern="(0[1-9]|1[012])"
+									maxlength="2"
+									required
 								/>
 
 								<input
-									class="input__small"
+									id="cardexpired_year"
+									name="cardexpired_year"
+									class="input-control-small"
 									type="text"
-									name="card_expired_year"
-									id="card_expired_year"
+									oninput="onInput(event)"
 									placeholder="YY"
+									pattern="^\d{2}$"
+									maxlength="2"
+									required
 								/>
 							</div>
+							<div class="error"></div>
 						</div>
-						<div class="form__input__wrapper">
-							<label for="card__secretcode">CVC</label>
+						<div class="input-control" id="input-control_secretcode">
+							<label for="secretcode">CVC</label>
 							<input
+								id="secretcode"
+								name="secretcode"
+								class="secretcode"
 								type="text"
-								name="card__secretcode"
-								id="card__secretcode"
 								placeholder=" e.g. 123"
+								pattern="^\d{3}$"
+								maxlength="3"
+								required
 							/>
+							<div class="error"></div>
 						</div>
 					</div>
-					<div class="button__wrapper">
-						<button class="btn__confirm">Confirm</button>
-					</div>
+					<button
+						type="submit"
+						class="btn__confirm"
+						onclick="validateInputs()"
+						id="btn__confirm"
+					>
+						Confirm
+					</button>
+				</form>
+
+				<div id="complete__state" class="complete__state">
+					<img src="images/icon-complete.svg" alt="" class="icon_complete" />
+					<h1 class="complete__title">Thank you!</h1>
+					<p class="complete__description">We've added your card details</p>
+					<button type="button" class="btn__confirm" id="btn__confirm">
+						Continue
+					</button>
 				</div>
 			</div>
 		</main>
-
-		<!-- Completed state start -->
-
-		<!-- Thank you! We've added your card details Continue -->
+		<script src="js/vanilla.js"></script>
+		<script src="js/api.js"></script>
 	</body>
 </html>
 
