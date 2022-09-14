@@ -38,7 +38,6 @@
 							type="text"
 							id="cardholder_name"
 							name="cardholder_name"
-							oninput="onInput(event)"
 							placeholder=" e.g. Jane Appleseed"
 							autocomplete="name"
 							maxlength="15"
@@ -47,14 +46,13 @@
 						<div class="error"></div>
 					</div>
 					<div class="input-control">
-						<label for="card_number">Card Number</label>
+						<label for="cardnumber">Card Number</label>
 						<input
 							type="text"
 							name="cardnumber"
-							id="card_number"
-							oninput="onInput(event)"
-							pattern="[0-9]{16}"
-							maxlength="16"
+							id="cardnumber"
+							pattern="[0-9_ ]{19}"
+							maxlength="19"
 							title="16 digit on your credit card"
 							placeholder="e.g. 1234 5678 9123 0000"
 							required
@@ -70,7 +68,6 @@
 									name="cardexpired_month"
 									class="input-control-small mr-1"
 									type="text"
-									oninput="onInput(event)"
 									placeholder="MM"
 									pattern="(0[1-9]|1[012])"
 									maxlength="2"
@@ -82,7 +79,6 @@
 									name="cardexpired_year"
 									class="input-control-small"
 									type="text"
-									oninput="onInput(event)"
 									placeholder="YY"
 									pattern="^\d{2}$"
 									maxlength="2"
@@ -126,7 +122,9 @@
 				</div>
 			</div>
 		</main>
-		<script src="js/vanilla.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
 		<script src="js/api.js"></script>
 	</body>
 </html>

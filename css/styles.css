@@ -76,9 +76,9 @@ main {
 }
 
 .card__front-number {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	text-align: center;
-	letter-spacing: 3.8px;
+	letter-spacing: 5.5px;
 }
 
 .card__back-wrapper {
@@ -134,6 +134,7 @@ main {
 	flex-direction: column;
 	margin-left: 5rem;
 	align-items: center;
+	transition: all 1s;
 }
 
 #complete__state button {
@@ -204,6 +205,8 @@ button:active {
 	padding: 10px 20px;
 	border-radius: 0.5rem;
 	width: 100%;
+	font-family: "Space Grotesk", sans-serif;
+	letter-spacing: 3px;
 }
 
 .input-control.success input {
@@ -250,7 +253,7 @@ button:active {
 		margin: 10px;
 		width: 22rem;
 		max-width: 90rem;
-		max-height: 70rem;
+		max-height: 50rem;
 		background-color: var(--white-color);
 	}
 
@@ -348,7 +351,7 @@ button:active {
 		justify-content: flex-start;
 		align-items: flex-start;
 		flex-direction: column;
-		margin-top: 10px;
+		margin-top: 4rem;
 	}
 
 	.input-control input {

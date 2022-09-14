@@ -1,6 +1,6 @@
 const form = document.getElementById("card_form");
 const cardholderName = document.getElementById("cardholder_name");
-const cardNumber = document.getElementById("card_number");
+const cardNumber = document.getElementById("cardnumber");
 const cardExpiredMonth = document.getElementById("cardexpired_month");
 const cardExpiredYear = document.getElementById("cardexpired_year");
 const cardSecretCode = document.getElementById("secretcode");
@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const cardholderNameValue = cardholderName.value;
 	const cardNumberValue = cardNumber.value;
+	cardFrontNumber.classList.add("card__front-number");
 	const cardExpiredMonthValue = cardExpiredMonth.value;
 	const cardExpiredYearValue = cardExpiredYear.value;
 	const secretcodeValue = cardSecretCode.value;
@@ -24,8 +25,7 @@ form.addEventListener("submit", (e) => {
 	if (validateInputs()) {
 		form.style.display = "none";
 		completeState.style.display = "flex";
-		let cardNumber = cardNumberValue.match(/.{4}/g);
-		cardFrontNumber.textContent = cardNumber;
+		cardFrontNumber.textContent = cardNumberValue;
 		cardFrontName.textContent = cardholderNameValue;
 		cardFrontExpired.textContent = `${cardExpiredMonthValue}/${cardExpiredYearValue}`;
 		cardBackNumber.textContent = secretcodeValue;
@@ -33,7 +33,7 @@ form.addEventListener("submit", (e) => {
 });
 
 completeState.addEventListener("click", (e) => {
-	form.reset();
+	// form.reset();
 	form.style.display = "flex";
 	completeState.style.display = "none";
 });
@@ -94,3 +94,18 @@ const setSuccess = (element) => {
 	inputControl.classList.add("success");
 	inputControl.classList.remove("error");
 };
+
+//input mask
+
+$(window).load(function () {
+	var Card = [{ mask: "#### #### #### ####" }];
+	$("#cardnumber").inputmask({
+		mask: Card,
+		greedy: true,
+	});
+
+	// $("#card__front-number").inputmask({
+	// 	mask: Card,
+	// 	greedy: true,
+	// });
+});
