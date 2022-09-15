@@ -32,13 +32,13 @@ Users should be able to:
 ### Screenshot
 
 <div style="display:flex; ">
-    <img src="./screenshoot/desktop-preview.png" style="height:100px; width:200px; object-fit:contain " />
-    <img src="./screenshoot/desktop-state-preview.png" style="height:200px; width:300px; object-fit:contain" />
-    <img src="./screenshoot/desktop-complete-preview.png" style="height:200px; width:300px; object-fit:contain" />
+    <img src="./screenshoot/desktop-preview.png"style="height:150px; width:300px; object-fit:cover" />
+    <img src="./screenshoot/desktop-state-preview.png" style="height:150px; width:300px; object-fit:cover" />
+    <img src="./screenshoot/desktop-complete-preview.png" style="height:150px; width:300px; object-fit:cover" />
 </div>
 <div style="display:flex;">
     <img src="./screenshoot/mobile-preview.png" style="height:400px; width:200px; object-fit:contain" />
-    <img src="./screenshoot/mobile-complete-preview.png" style="height:200px; width:300px; object-fit:contain" />
+    <img src="./screenshoot/mobile-complete-preview.png" style="height:400px; width:200px; object-fit:contain" />
 </div>
 
 ### Links
