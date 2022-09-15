@@ -33,7 +33,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<div style="display:flex; ">
+    <img src="./screenshoot/desktop-preview.png" style="height:200px; width:300px; object-fit:contain " />
+    <img src="./screenshoot/desktop-state-preview.png" style="height:200px; width:300px; object-fit:contain" />
+    <img src="./screenshoot/desktop-complete-preview.png" style="height:200px; width:300px; object-fit:contain" />
+</div>
+<div style="display:flex;">
+    <img src="./screenshoot/mobile-preview.png" style="height:200px; width:300px; object-fit:contain" />
+    <img src="./screenshoot/mobile-complete-preview.png" style="height:200px; width:300px; object-fit:contain" />
+</div>
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 

@@ -207,7 +207,7 @@ button:active {
 	border-radius: 0.5rem;
 	width: 100%;
 	font-family: "Space Grotesk", sans-serif;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 
 .input-control.success input {
