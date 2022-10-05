@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="card__back-wrapper">
-					<p id="card__back-number" class="card__back-number">000</p>
+					<h1 id="card__back-number" class="card__back-number">000</h1>
 				</div>
 			</div>
 			<div class="form__section">
@@ -62,7 +62,7 @@
 					<div class="card__description_wrapper">
 						<div class="input-control mr-1" id="input-control-expired">
 							<label for="cardexpired">Exp. Date (MM/YY) </label>
-							<div class="flex">
+							<div class="flex" id="cardexpired">
 								<input
 									id="cardexpired_month"
 									name="cardexpired_month"
@@ -102,12 +102,7 @@
 							<div class="error"></div>
 						</div>
 					</div>
-					<button
-						type="submit"
-						class="btn__confirm"
-						onclick="validateInputs()"
-						id="btn__confirm"
-					>
+					<button type="submit" class="btn__confirm" onclick="validateInputs()">
 						Confirm
 					</button>
 				</form>
@@ -116,9 +111,7 @@
 					<img src="images/icon-complete.svg" alt="" class="icon_complete" />
 					<h1 class="complete__title">Thank you!</h1>
 					<p class="complete__description">We've added your card details</p>
-					<button type="button" class="btn__confirm" id="btn__confirm">
-						Continue
-					</button>
+					<button type="button" class="btn__confirm">Continue</button>
 				</div>
 			</div>
 		</main>
